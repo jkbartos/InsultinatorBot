@@ -20,8 +20,8 @@ starterbot_id = None
 
 #constraints
 RTM_READ_DELAY = 1 #seconds
-EXAMPLE_COMMAND = "do"
 INSULT_COMMAND = "insult"
+HELP_COMMAND = "help"
 MENTION_REGEX = "^<@(|[WU].+?)>(.*)"
 
 def parse_bot_commands(slack_events):
@@ -53,16 +53,11 @@ def handle_command(command, channel):
     """
         Executes bot command if the command is known
     """
-    # Default response is help text for the user
-    default_response = "Not sure what you mean. Try *{}*.".format(EXAMPLE_COMMAND)
-    
     # Finds and executes the given command, filling in response
     response = None
+    default_response = "I don't know how to do that. Try *{}*".format(HELP_COMMAND)
 
-    # This is where you start to implement more commands!
-    if command.startswith(EXAMPLE_COMMAND):
-        response = "Sure... write some more code then I can do that!"
-
+    # handler for the insult command
     if command.startswith(INSULT_COMMAND):
         response = insultinator.generate_insult()
         print(response)
