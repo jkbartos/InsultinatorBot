@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # Author: Jordan K Bartos
-# Description: generates random insults for slackbot
+# Description: A class that manages and generates insults for a slackbot
 # ------------------------------------------------------------------------------
 import requests
 import re

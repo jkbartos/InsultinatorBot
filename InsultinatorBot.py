@@ -1,7 +1,8 @@
 # ------------------------------------------------------------------------------
 # Author: Jordan K Bartos
-# Date: June 8, 2019
-# Description: A beginner slackbot, hopefully
+# Date: June 9, 2019
+# Description: A slackbot that generates random insults for members in the
+#              workspace.
 # ------------------------------------------------------------------------------
 import os
 import time
@@ -31,8 +32,6 @@ def parse_bot_commands(slack_events):
         If it's not found, then this function returns None, None.
     """
     for event in slack_events:
-        print(event)
-        print("\n")
         if event["type"] == "message" and not "subtype" in event:
             user_id, message = parse_direct_mention(event["text"])
             if user_id == starterbot_id:
@@ -60,7 +59,6 @@ def handle_command(command, channel):
     # handler for the insult command
     if command.startswith(INSULT_COMMAND):
         response = insultinator.generate_insult()
-        print(response)
 
     # Sends the response back to the channel
     slack_client.api_call(
