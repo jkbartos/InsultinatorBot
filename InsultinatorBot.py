@@ -61,7 +61,7 @@ def handle_command(command, channel):
         response = insultinator.generate_insult()
 
     if command.startswith(HELP_COMMAND):
-        response = "Help yourself, " + Insult.get_noun()
+        response = "Help yourself, " + insultinator.get_noun()
 
     # Sends the response back to the channel
     slack_client.api_call(
