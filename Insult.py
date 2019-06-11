@@ -53,4 +53,4 @@ class Insultinator:
                rand_adj_two + " " + rand_noun + "."
 
     def get_noun(self):
-        return self.nouns[random.randint(0, len(self.nouns) -1 )]
+        return self.nouns[random.randint(0, len(self.nouns) -1 )];
