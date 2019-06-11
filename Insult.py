@@ -52,3 +52,5 @@ class Insultinator:
         return rand_name + " is " + rand_adverb + " " + rand_adj_one + " " + \
                rand_adj_two + " " + rand_noun + "."
 
+    def get_noun(self):
+        return self.nouns[random.randint(0, len(self.nouns) -1 )]
