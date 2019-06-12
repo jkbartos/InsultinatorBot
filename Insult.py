@@ -37,6 +37,7 @@ class Insultinator:
                users["members"][i]["id"] != "USLACKBOT":
                 self.names.append(users["members"][i]["real_name"])
 
+
     def generate_insult(self):
         # get a random name, adverb, two adjectives, and a noun
         rand_name = self.names[random.randint(0, len(self.names) - 1)]
@@ -51,6 +52,7 @@ class Insultinator:
         # return formatted response
         return rand_name + " is " + rand_adverb + " " + rand_adj_one + " " + \
                rand_adj_two + " " + rand_noun + "."
+
 
     def get_noun(self):
         return self.nouns[random.randint(0,len(self.nouns) - 1)]
