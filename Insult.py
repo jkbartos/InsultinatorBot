@@ -37,18 +37,23 @@ class Insultinator:
                users["members"][i]["id"] != "USLACKBOT":
                 self.names.append(users["members"][i]["real_name"])
 
-    def generate_insult(self):
+    def generate_insult(self, command):
         # get a random name, adverb, two adjectives, and a noun
-        rand_name = self.names[random.randint(0, len(self.names) - 1)]
-        rand_adverb = self.adverbs[random.randint(0, len(self.adverbs) - 1)]
-        rand_adj_one = self.adjectives[random.randint(0, len(self.adjectives) - 1)]
-        rand_adj_two = self.adjectives[random.randint(0, len(self.adjectives) - 1)]
-        rand_noun = self.nouns[random.randint(0, len(self.nouns) - 1)]
+        if command:
+            name = command
+        else:
+            name = self.names[random.randint(0, len(self.names) - 1)]
+
+        adverb = self.adverbs[random.randint(0, len(self.adverbs) - 1)]
+        adj_one = self.adjectives[random.randint(0, len(self.adjectives) - 1)]
+        adj_two = self.adjectives[random.randint(0, len(self.adjectives) - 1)]
+        noun = self.nouns[random.randint(0, len(self.nouns) - 1)]
         # get two different adjectives from the adjectives list
-        while rand_adj_one == rand_adj_two:
-            rand_adj_two = self.adjectives[random.randint(0, len(self.adjectives) - 1)]
+        while adj_one == adj_two:
+            adj_two = self.adjectives[random.randint(0, len(self.adjectives) - 1)]
 
         # return formatted response
-        return rand_name + " is " + rand_adverb + " " + rand_adj_one + " " + \
-               rand_adj_two + " " + rand_noun + "."
+        return name + " is " + adverb + " " + adj_one + " " + adj_two + " " + noun + "."
 
+    def get_noun(self):
+        return nouns[random.randint(0, len(self.nouns) - 1)]
