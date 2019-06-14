@@ -39,10 +39,10 @@ class Insultinator:
 
     def generate_insult(self, command):
         # get a random name, adverb, two adjectives, and a noun
-        if command:
-            name = command
-        else:
+        if command == "insult":
             name = self.names[random.randint(0, len(self.names) - 1)]
+        else:
+            name = command.replace('insult','',65535)
 
         adverb = self.adverbs[random.randint(0, len(self.adverbs) - 1)]
         adj_one = self.adjectives[random.randint(0, len(self.adjectives) - 1)]

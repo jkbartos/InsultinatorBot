@@ -54,11 +54,7 @@ def handle_command(command, channel):
     """
     # Finds and executes the given command, filling in response
     response = None
-<<<<<<< HEAD
     default_response = "That doesn't look like anything to me. Try *{}*.".format(HELP_COMMAND)
-=======
-    default_response = "That doesn't look like anything to me.\nTry *{}*".format(HELP_COMMAND)
->>>>>>> 9f168b47c5d8cfb166af1200970d90a56bb3d1ca
 
     # handler for the insult command
     if command.startswith(INSULT_COMMAND):
@@ -66,9 +62,6 @@ def handle_command(command, channel):
 
     if command.startswith(HELP_COMMAND):
         response = "Help yourself, " + insultinator.get_noun() + "."
-
-    if command.startswith(HELP_COMMAND):
-        response = "Help yourself, " + insultinator.get_noun()
 
     # Sends the response back to the channel
     slack_client.api_call(
