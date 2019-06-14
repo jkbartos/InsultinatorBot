@@ -55,5 +55,6 @@ class Insultinator:
         # return formatted response
         return name + " is " + adverb + " " + adj_one + " " + adj_two + " " + noun + "."
 
+
     def get_noun(self):
-        return nouns[random.randint(0, len(self.nouns) - 1)]
+        return self.nouns[random.randint(0, len(self.nouns) - 1)]
