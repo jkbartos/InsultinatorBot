@@ -1,18 +1,16 @@
 # InsultinatorBot
 A slackbot that generates insults to sling at your colleagues or friends.
 
-<h3>To get started with this slackbot, follow these steps</h3>
-  <ol>
-    <li> Clone this repository or download and extract the files to a folder on your system </li>
-    <li> Install virtualenv on your system. `sudo apt install virtualenv` </li>
-    <li> Create a virtual environment in which to run this slack bot. `virtualenv Insultinator` </li>
-    <li> Install slackclient in the virtual environment. `pip install slackclient` </li>
-    <li> At https://api.slack.com/apps/new, create a Slack App, and copy its Bot User OAuth Access Token </li>
-    <li> Save the token as an environment variable in your virtual environment. `export SLACK_BOT_TOKEN='[your bot user access token]'`</li>
-    <li> Begin the slack bot with the command `python InsultinatorBot.py` </li>
-  </ol>
+### To get started with this slackbot, follow these steps
+    1. Clone this repository or download and extract the files to a folder on your system
+    2. Install virtualenv on your system. `sudo apt install virtualenv`
+    3. Create a virtual environment in which to run this slack bot. `virtualenv Insultinator`
+    4. Install slackclient in the virtual environment. `pip install slackclient`
+    5. At https://api.slack.com/apps/new, create a Slack App, and copy its Bot User OAuth Access Token
+    6. Save the token as an environment variable in your virtual environment. `export SLACK_BOT_TOKEN='[your bot user access token]'`
+    7. Begin the slack bot with the command `python InsultinatorBot.py`
 
-<h3> InsultinatorBot Operation </h3>
+### InsultinatorBot Operation
   The bot will load a basic library from the adjectives.txt, adverbs.txt, and nouns.txt files in the system. It will load the names of all the users in the slack workspace upon starting up.
   The command `@[your Slack App name] insult` will generate a random insult targeted at a random person in your workspace.
   <h4>InsultinatorBot Commands</h4>
