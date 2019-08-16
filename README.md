@@ -1,5 +1,5 @@
 # InsultinatorBot
-A slackbot that generates insults to sling at your colleagues or friends
+A slackbot that generates insults to sling at your colleagues or friends.
 
 <div>
   <p>
@@ -21,13 +21,32 @@ A slackbot that generates insults to sling at your colleagues or friends
 <p>
   The bot will load a basic library from the adjectives.txt, adverbs.txt, and nouns.txt files in the system. It will load the names of all the users in the slack workspace upon starting up.
   The command `@[your Slack App name] insult` will generate a random insult targeted at a random person in your workspace.
+  <h4>InsultinatorBot Commands</h4>
+      <i>@InsultinatorBot insult</i> - generates a random insult targeted at a random person in the workspace.
+      <i>@InsultinatorBot insult @[name]</i> - generates a random insult targeted at [name]. If [name] is the name or handle of someone in your workspace, slackbot will insult them with an @ mention.
 </p>
 </div>
 
-<div>
+<div 
   <h3> Upcoming Features </h3>
   <p>
-    Features in progress include the ability to target insults at particular people and the ability to add words to the  Insultinator's library from Slack.
+    Features in progress include 
+    <ul>
+      <li>the ability to add words to the Insultinator's library by the slack workspace's users via a bot command,
+      <li>transitioning the vocabulary storage away from text-based .log files and into a proper database such as postgreSQL,
+      <li>and moving from @ commands to / commands which requires a major overhaul of the bot's code-base.
+    </ul>
   </p>
 </div>
+
+<div>
+  <h3>Known Issues</h3>
+  <p>
+    <ul>
+      <li>If the connection is interuppted for a moment, Insultinator bot does not attempt to reconnect automatically. Instead, an exception is thrown and the program terminates. 
+    </ul>
+  </p>
+</div>
+ 
+    
     
