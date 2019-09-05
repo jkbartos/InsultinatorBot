@@ -1,5 +1,5 @@
 # InsultinatorBot
-A slackbot that generates insults to sling at your colleagues or friends.
+A slackbot modeled after a childhood toy that generates random silly insults for good-natured friendly ribbings
 
 #### To get started with this slackbot, follow these steps
 1. Clone this repository or download and extract the files to a folder on your system
