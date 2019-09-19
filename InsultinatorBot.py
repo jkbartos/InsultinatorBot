@@ -66,6 +66,9 @@ def handle_command(command, channel):
     if command.startswith(HELP_COMMAND):
         response = "Figure it out yourself, " + insultinator.get_noun() + "."
 
+    if command.startswith(HELP_COMMAND):
+        response = "Figure it out yourself, " + insultinator.get_noun() + "."
+
     # Sends the response back to the channel
     slack_client.api_call(
         "chat.postMessage",
