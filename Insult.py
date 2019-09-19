@@ -31,7 +31,7 @@ class Insultinator:
         
         # load the users from the slack channel
         users = slack_client.api_call("users.list", limit = 100)
-        self.names = [] 
+        self.names = []
         for i in range(0, len(users["members"])):
             if users["members"][i]["is_bot"] == False and \
                users["members"][i]["id"] != "USLACKBOT":
