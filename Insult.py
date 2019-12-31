@@ -42,7 +42,7 @@ class Insultinator:
         if command == "insult":
             name = self.names[random.randint(0, len(self.names) - 1)]
         else:
-            name = command.replace('insult','',65535)
+            name = command.replace('insult','',65535).split()[0]
 
         adverb = self.adverbs[random.randint(0, len(self.adverbs) - 1)]
         adj_one = self.adjectives[random.randint(0, len(self.adjectives) - 1)]
