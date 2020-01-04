@@ -1,3 +1,4 @@
 *.pyc
 *.txt
 venv/
+add_workspaces.sql
